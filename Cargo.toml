@@ -1,0 +1,46 @@
+[package]
+name = "arca-sdk"
+version = "0.1.0"
+edition = "2024"
+description = "SDK para integración con ARCA/AFIP Argentina - Facturación electrónica y servicios web"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/MbareteSoft/arca-sdk"
+keywords = ["afip", "arca", "argentina", "facturacion", "cae"]
+categories = ["api-bindings"]
+
+[lib]
+name = "arca"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "arca-sdk"
+required-features = ["cli"]
+
+[features]
+default = ["cli"]
+cli = ["clap"]
+
+[dependencies]
+libc = "0.2"
+anyhow = "1"
+async-trait = "0.1"
+base64 = "0.22"
+chrono = { version = "0.4", features = ["clock"] }
+quick-xml = "0.39"
+reqwest = "0.13"
+openssl = { version = "0.10", features = ["vendored"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "sync", "fs", "io-util"] }
+clap = { version = "4", features = ["derive"], optional = true }
+tempfile = "3"
+zeroize = { version = "1.8", features = ["zeroize_derive"] }
+validator = { version = "0.20", features = ["derive"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+opt-level = 3
+panic = "abort"

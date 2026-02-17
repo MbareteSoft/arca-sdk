@@ -1,0 +1,15 @@
+# OpenSSL config for AFIP production servers
+# AFIP uses weak DH parameters that OpenSSL 3.0+ rejects by default
+# Use this config: OPENSSL_CONF=openssl_afip.cnf cargo run ...
+
+openssl_conf = openssl_init
+
+[openssl_init]
+ssl_conf = ssl_sect
+
+[ssl_sect]
+system_default = system_default_sect
+
+[system_default_sect]
+CipherString = DEFAULT@SECLEVEL=1
+MinProtocol = TLSv1.2

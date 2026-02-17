@@ -1,0 +1,30 @@
+# Build
+/target
+
+# Certificates & secrets
+/cert
+*.pfx
+*.pem
+*.p12
+*.key
+*.cer
+*.crt
+
+# Environment & secrets
+.env
+.env.*
+
+# Token cache
+tokens_cache/
+arca_token_*.json
+/tmp/arca_token_cache*.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
