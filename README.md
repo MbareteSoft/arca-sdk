@@ -124,7 +124,7 @@ login("wsfe")
   |-- WSAA: login completo -> guardar en RAM + disco -> OK
 ```
 
-Ver [DOCUMENTACION_PERSISTENCIA.md](DOCUMENTACION_PERSISTENCIA.md) para guia detallada.
+Ver [DOCUMENTACION_PERSISTENCIA.md](docs/DOCUMENTACION_PERSISTENCIA.md) para guia detallada.
 
 ## Ejemplos
 
@@ -150,7 +150,7 @@ cargo build      # Verificar compilacion
 | [docs/ffi.md](docs/ffi.md) | Guia FFI/DLL con ejemplos |
 | [docs/examples.md](docs/examples.md) | Ejemplos detallados Rust |
 | [docs/errors.md](docs/errors.md) | Codigos de error ARCA + FFI |
-| [DOCUMENTACION_PERSISTENCIA.md](DOCUMENTACION_PERSISTENCIA.md) | Sistema de persistencia de tokens |
+| [docs/DOCUMENTACION_PERSISTENCIA.md](docs/DOCUMENTACION_PERSISTENCIA.md) | Sistema de persistencia de tokens |
 
 ## Arquitectura
 
